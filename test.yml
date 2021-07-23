@@ -7,9 +7,7 @@ resources:
     name: JayanthiRamadass/jay
     
 jobs:
-  - job: redis_cache_creation
-    pool:
-      name: poc-2-test   
+  - job: redis_cache_creation  
     steps:
     - task: GithubRelease@0
       displayName: 'Create GitHub Release'
