@@ -4,7 +4,7 @@ resources:
   - repository: jay 
     type: github
     endpoint: github.com_JayanthiRamadass
-    name: github.com_JayanthiRamadass/jay
+    name: JayanthiRamadass/jay
     
 jobs:
   - job: redis_cache_creation  
