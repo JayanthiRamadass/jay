@@ -1,0 +1,23 @@
+trigger: none
+resources:
+  repositories:
+  - repository: jay 
+    type: github
+    endpoint: JayanthiRamadass
+    name: JayanthiRamadass/jay
+    
+jobs:
+  - job: redis_cache_creation
+    pool:
+      name: poc-2-test   
+    steps:
+    - task: GithubRelease@0
+      displayName: 'Create GitHub Release'
+      inputs:
+        gitHubConnection: JayanthiRamadass
+        repositoryName: JayanthiRamadass/jay 
+        tagSource: manual                     
+        tag: $(Build.BuildNumber)   
+        assets: |
+           $(Build.ArtifactStagingDirectory)/*.exe
+           $(Build.ArtifactStagingDirectory)/README.txt
