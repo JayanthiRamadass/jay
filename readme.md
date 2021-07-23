@@ -15,7 +15,7 @@ APPS Admins (Resource Group Level)
 To create azure resources – VM , Load balancer, Storage account.
 Reader
 Reader access to shared image gallery (Windows VM OS , Linux OS)
-Automation Account (DSC windows) - To install Extensions
+Automation Account (DSC windows) - To install Ehttps://github.com/JayanthiRamadass/jay.gitxtensions
 Service principal - API permission
 AD Reader Scope for Service Principal
 How to use the templates
