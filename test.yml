@@ -1,18 +1,11 @@
-trigger: none
-resources:
-  repositories:
-  - repository: jay 
-    type: github
-    endpoint: github.com_JayanthiRamadass
-    name: JayanthiRamadass/jay
-    
+trigger: none    
 jobs:
-  - job: redis_cache_creation  
+  - job: 'create_release'  
     steps:
     - task: GithubRelease@0
       displayName: 'Create GitHub Release'
       inputs:
-        gitHubConnection: JayanthiRamadass
+        gitHubConnection: AzureConnection
         repositoryName: JayanthiRamadass/jay 
         tagSource: manual                     
         tag: $(Build.BuildNumber)   
